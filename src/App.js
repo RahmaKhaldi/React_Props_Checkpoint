@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+
+import reactDom from 'react-dom';
 import './App.css';
-
+import Img from "./assets/img.png"
+import Profile from "./Profile/Profile"
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    const fullName="rahma"
+    const bio="Bonjour"
+const profession="dev"
 
+  const handleName=(name)=>{
+    alert(`${name}`)
+  }
+  const styleObject={color:"red"}
+    return (
+      <div style={styleObject} className="App">
+      <Profile fullName={fullName} bio={bio} profession={profession} handleName={handleName}>
+      <img src={Img} alt="img" />
+      </Profile>
+       
+      </div>
+    );
+  }
+  
 export default App;
